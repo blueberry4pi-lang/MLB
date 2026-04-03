@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm ci --only=production
+RUN npm install --only=production
 
 # Copy application code
 COPY . .
@@ -23,6 +23,9 @@ RUN addgroup -g 1001 -S nodejs && \
 # Change ownership of app directory
 RUN chown -R nextjs:nodejs /app
 USER nextjs
+
+# Set environment variable for port
+ENV PORT=8513
 
 # Define the command to run the application
 CMD ["node", "index.js"]
