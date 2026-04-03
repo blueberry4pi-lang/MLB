@@ -1,0 +1,26 @@
+{
+  "name": "mlb-analyzer",
+  "version": "1.0.0",
+  "description": "MLB Data Analysis Tool",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "lodash": "^4.17.21",
+    "d3": "^7.8.0"
+  },
+  "devDependencies": {
+    "jest": "^29.6.0"
+  },
+  "keywords": [
+    "mlb",
+    "baseball",
+    "analytics",
+    "data"
+  ],
+  "author": "MLB Analyzer Team",
+  "license": "MIT"
+}

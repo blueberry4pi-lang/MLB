@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  mlb-analyzer:
+    build: .
+    container_name: mlb-analyzer
+    ports:
+      - "8513:8513"
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    environment:
+      - NODE_ENV=production
+      - PORT=8513
+    restart: unless-stopped
+    networks:
+      - mlb-analyzer-network
+
+networks:
+  mlb-analyzer-network:
+    driver: bridge
